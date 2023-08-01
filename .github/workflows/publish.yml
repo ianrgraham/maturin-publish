@@ -24,8 +24,8 @@ jobs:
     - name: Install built wheel
       if: matrix.target == 'x86_64'
       run: |
-        pip install crfs --no-index --find-links dist --force-reinstall
-        python -c "import crfs"
+        pip install maturin-publish --no-index --find-links dist --force-reinstall
+        python -c "import maturin_publish"
     - name: Upload wheels
       uses: actions/upload-artifact@v3
       with:
